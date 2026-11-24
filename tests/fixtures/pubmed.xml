@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle//EN" "https://dtd.nlm.nih.gov/example.dtd">
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation><PMID>100</PMID><Article>
+      <Journal><ISSN>1111-2222</ISSN><JournalIssue><Volume>10</Volume><PubDate><Year>2026</Year><Month>Nov</Month><Day>23</Day></PubDate></JournalIssue><Title>Example Genomics</Title></Journal>
+      <ArticleTitle>HLA typing across <i>populations</i></ArticleTitle>
+      <Abstract><AbstractText Label="RESULTS">A benchmark evaluated a reference panel.</AbstractText></Abstract>
+      <AuthorList><Author><LastName>Smith</LastName><ForeName>Avery</ForeName></Author></AuthorList>
+      <PublicationTypeList><PublicationType>Journal Article</PublicationType></PublicationTypeList>
+    </Article></MedlineCitation>
+    <PubmedData><ArticleIdList><ArticleId IdType="doi">10.1234/test.hla</ArticleId></ArticleIdList></PubmedData>
+  </PubmedArticle>
+</PubmedArticleSet>

@@ -1,0 +1,25 @@
+# Set demo = false before using your own project definitions.
+[hub]
+timezone = "UTC"
+port = 8765
+demo = true
+skip_dirs = [".git", ".venv", "node_modules", "__pycache__"]
+generic_cwds = ["downloads", "documents"]
+
+[projects.methods]
+name = "Methods Notebook"
+tier = 1
+color_slot = 1
+
+[projects.benchmark]
+name = "Workflow Benchmarks"
+tier = 1
+color_slot = 3
+
+[literature]
+# Set public queries or feeds below to enable Run now.
+pubmed_query = ""
+arxiv_query = ""
+synthesis_enabled = false
+filing_enabled = false
+auto_limit = 3

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <entry>
+    <id>http://arxiv.org/abs/2611.01234v2</id><updated>2026-11-24T04:00:00Z</updated><published>2026-11-20T02:00:00Z</published>
+    <title>HLA typing with a reproducible benchmark</title>
+    <summary>An independent cohort and reference panel were evaluated.</summary><author><name>Avery Smith</name></author>
+    <arxiv:doi>10.1234/test.hla</arxiv:doi>
+  </entry>
+</feed>

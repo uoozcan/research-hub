@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Hub</title>
+<link rel="stylesheet" href="/static/vendor/vis-timeline-graph2d.min.css">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/morning.css">
+<link rel="stylesheet" href="/static/workspace.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="hub-mark" aria-hidden="true"></span>Research Hub</div>
+  <label class="project-pick">Project
+    <select id="project"></select>
+  </label>
+  <nav class="tabs" aria-label="Workspace views" id="tabs">
+    <button type="button" data-tab="overview">Overview</button>
+    <button type="button" data-tab="literature">Literature</button>
+    <button type="button" data-tab="timeline">Timeline</button>
+    <button type="button" data-tab="progress">Progress</button>
+    <details class="shell-menu" id="more-views">
+      <summary id="more-view-label">More</summary>
+      <div class="shell-popover">
+        <button type="button" data-tab="accountability">Accountability</button>
+        <button type="button" data-tab="ideas">Idea map</button>
+        <button type="button" data-tab="figures">Figures</button>
+        <button type="button" data-tab="kanban">Kanban</button>
+        <button type="button" data-tab="brain">Second brain</button>
+        <button type="button" data-tab="handoff">AI handoff</button>
+        <button type="button" data-tab="cv">CV</button>
+        <button type="button" data-tab="roadmap">Roadmap</button>
+      </div>
+    </details>
+  </nav>
+  <div class="tools">
+    <details class="shell-menu focus-menu">
+      <summary>Focus <span id="focus-summary-time" hidden></span></summary>
+      <div class="shell-popover">
+        <div class="pomo" id="pomo" aria-label="Pomodoro timer">
+          <div class="pomo-modes" role="group" aria-label="Timer length">
+            <button data-min="25" class="on" title="Focus">25</button>
+            <button data-min="5" title="Short break">5</button>
+            <button data-min="15" title="Long break">15</button>
+          </div>
+          <output id="pomo-time" class="pomo-time">25:00</output>
+          <button id="pomo-go" class="pomo-btn" aria-label="Start">▶</button>
+          <button id="pomo-reset" class="pomo-btn" aria-label="Reset">↺</button>
+          <span id="pomo-today" class="pomo-today" title="Focus minutes today"></span>
+        </div>
+      </div>
+    </details>
+    <button type="button" id="refresh" class="ghost" title="Re-read all activity sources" aria-label="Refresh data">Refresh</button>
+    <button type="button" id="theme" class="ghost" title="Toggle light and dark theme" aria-label="Toggle light and dark theme">◐</button>
+  </div>
+</header>
+<div id="status" class="status" role="status"></div>
+<main>
+  <section id="tab-overview" class="tab"></section>
+  <section id="tab-literature" class="tab"></section>
+  <section id="tab-accountability" class="tab"><div id="accountability"></div></section>
+  <section id="tab-timeline" class="tab">
+    <div class="toolbar">
+      <span class="hint">Drag to pan, scroll or pinch to zoom. Click a day in the activity strip to list what happened that day.</span>
+      <span class="spacer"></span>
+      <button data-range="14">2 weeks</button><button data-range="60">2 months</button>
+      <button data-range="180">6 months</button><button data-range="all">All</button>
+    </div>
+    <div class="chart-card">
+      <div class="chart-head"><h3>Daily activity</h3><div id="strip-legend" class="legend"></div></div>
+      <div id="strip"></div>
+    </div>
+    <div id="timeline"></div>
+    <aside id="day-panel" class="panel" hidden></aside>
+  </section>
+  <section id="tab-ideas" class="tab">
+    <div class="toolbar"><div id="idea-legend" class="legend"></div><span class="spacer"></span>
+      <label class="check"><input type="checkbox" id="idea-labels" checked> Labels</label></div>
+    <div id="idea-scroll" class="idea-scroll"><svg id="idea-map" role="img" aria-label="Idea map"></svg></div>
+    <aside id="idea-panel" class="panel" hidden></aside>
+    <details class="table-view"><summary>Table view</summary><div id="idea-table"></div></details>
+  </section>
+  <section id="tab-progress" class="tab">
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="Period">
+        <button data-period="day">Daily</button><button data-period="week" class="on">Weekly</button><button data-period="month">Monthly</button>
+      </div>
+      <span class="hint">Narratives come from <code>summaries/</code> and the vault logs. The rest is counted from the sources.</span>
+    </div>
+    <div id="progress-list" class="cards"></div>
+  </section>
+  <section id="tab-figures" class="tab">
+    <div class="toolbar">
+      <input id="fig-search" type="search" placeholder="Filter figures…">
+      <select id="fig-folder"><option value="">All folders</option></select>
+      <label class="check"><input type="checkbox" id="fig-quar"> Show quarantined</label>
+      <span id="fig-count" class="hint"></span>
+    </div>
+    <div id="fig-grid" class="fig-grid"></div>
+  </section>
+  <section id="tab-kanban" class="tab"><div id="kanban"></div></section>
+  <section id="tab-brain" class="tab">
+    <div class="brain">
+      <div class="brain-side">
+        <input id="brain-search" type="search" placeholder="Search notes…">
+        <select id="brain-tag"><option value="">All tags</option></select>
+        <div id="brain-list"></div>
+      </div>
+      <article id="brain-note" class="note"></article>
+    </div>
+  </section>
+  <section id="tab-handoff" class="tab"><div id="handoff" class="cards"></div></section>
+  <section id="tab-cv" class="tab">
+    <div class="cv"><div id="cv-list" class="cv-list"></div><article id="cv-view" class="note cv-view"></article></div>
+  </section>
+  <section id="tab-roadmap" class="tab"><article id="roadmap" class="note"></article></section>
+</main>
+<dialog id="viewer"><div class="viewer-head"><span id="viewer-title"></span><a id="viewer-open" target="_blank" rel="noopener">Open original</a><button id="viewer-close" aria-label="Close">✕</button></div><div id="viewer-body"></div></dialog>
+<script src="/static/vendor/vis-timeline-graph2d.min.js"></script>
+<script src="/static/vendor/markdown-it.min.js"></script>
+<script src="/static/app.js" defer></script>
+<script src="/static/morning.js" defer></script>
+<script src="/static/overview.js" defer></script>
+</body>
+</html>

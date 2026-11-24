@@ -1,0 +1,22 @@
+# Vendored browser libraries
+
+- vis-timeline 7.7.3 — (Apache-2.0 OR MIT). https://www.npmjs.com/package/vis-timeline/v/7.7.3
+- markdown-it 14.1.0 — MIT. https://www.npmjs.com/package/markdown-it/v/14.1.0
+- entities 4.5.0 — BSD-2-Clause. https://www.npmjs.com/package/entities/v/4.5.0
+- linkify-it 5.0.2 — MIT. https://www.npmjs.com/package/linkify-it/v/5.0.2
+- mdurl 2.1.0 — MIT. https://www.npmjs.com/package/mdurl/v/2.1.0
+- punycode.js 2.3.1 — MIT. https://www.npmjs.com/package/punycode.js/v/2.3.1
+- uc.micro 2.1.0 — MIT. https://www.npmjs.com/package/uc.micro/v/2.1.0
+- @babel/runtime-corejs3 7.23.2 — MIT. https://www.npmjs.com/package/@babel/runtime-corejs3/v/7.23.2
+- @egjs/hammerjs 2.0.17 — MIT. https://www.npmjs.com/package/@egjs/hammerjs/v/2.0.17
+- component-emitter 1.3.0 — MIT. https://www.npmjs.com/package/component-emitter/v/1.3.0
+- core-js-pure 3.33.0 — MIT. https://www.npmjs.com/package/core-js-pure/v/3.33.0
+- cssfilter 0.0.10 — MIT. https://www.npmjs.com/package/cssfilter/v/0.0.10
+- keycharm 0.4.0 — (Apache-2.0 OR MIT). https://www.npmjs.com/package/keycharm/v/0.4.0
+- moment 2.29.4 — MIT. https://www.npmjs.com/package/moment/v/2.29.4
+- propagating-hammerjs 2.0.1 — MIT. https://www.npmjs.com/package/propagating-hammerjs/v/2.0.1
+- style-inject 0.3.0 — MIT. https://www.npmjs.com/package/style-inject/v/0.3.0
+- uuid 9.0.1 — MIT. https://www.npmjs.com/package/uuid/v/9.0.1
+- vis-data 7.1.7 — (Apache-2.0 OR MIT). https://www.npmjs.com/package/vis-data/v/7.1.7
+- vis-util 5.0.5 — (Apache-2.0 OR MIT). https://www.npmjs.com/package/vis-util/v/5.0.5
+- xss 1.0.14 — MIT. https://www.npmjs.com/package/xss/v/1.0.14

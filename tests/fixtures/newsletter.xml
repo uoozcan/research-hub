@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Newsletter example</title>
+ <item><title>New methods</title><link>https://example.org/posts/methods?utm_source=email</link><description><![CDATA[<b>Genomics</b> commentary.]]></description><pubDate>Tue, 24 Nov 2026 02:00:00 GMT</pubDate></item>
+ <item><title>Old methods</title><link>https://example.org/posts/old</link><pubDate>Tue, 10 Nov 2026 02:00:00 GMT</pubDate></item>
+</channel></rss>

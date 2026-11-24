@@ -1,0 +1,2 @@
+vis-timeline 7.7.3  https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/ (standalone/umd + styles)
+markdown-it 14.1.0  https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/
